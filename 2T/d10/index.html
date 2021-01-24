@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>Random Number Game</h1>
+        <form action="" class="range-form">
+            <div>
+                <h2>Generate a number between 0 and <span class="max-range"></span></h2>
+            </div>
+            <input type="range" class="range-input" value="0" min="0" max="200">
+        </form>
+        <form action="" class="guess-form">
+            <span>guess the number:
+                <input type="text" class="guess-input">
+                <button>play!</button>
+            </span>
+        </form>
+        <span class="isRight"></span>
+        <script src="index.js"></script>
+    </body>
+</html>

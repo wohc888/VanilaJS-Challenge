@@ -1,5 +1,4 @@
-import "./styles.css";
-
+// import "./styles.css";
 const pendingList = document.getElementById("js-pending"),
   finishedList = document.getElementById("js-finished"),
   form = document.getElementById("js-form"),
@@ -119,9 +118,11 @@ function saveState() {
 function loadState() {
   pendingTasks = JSON.parse(localStorage.getItem(PENDING)) || [];
   finishedTasks = JSON.parse(localStorage.getItem(FINISHED)) || [];
+
 }
 
 function restoreState() {
+  console.log(typeof(pendingTasks), pendingTasks);
   pendingTasks.forEach(function(task) {
     paintPendingTask(task);
   });
@@ -134,6 +135,7 @@ function handleFormSubmit(e) {
   e.preventDefault();
   const taskObj = getTaskObject(input.value);
   input.value = "";
+
   paintPendingTask(taskObj);
   savePendingTask(taskObj);
   saveState();

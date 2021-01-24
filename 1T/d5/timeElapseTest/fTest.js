@@ -20,7 +20,7 @@ function elapsedTime(fTest){
     
     console.log(`Elapsed time: ` + String(now - lastChristmas) + ` ms`);
 
-    return vReturn;
+    return 
 }
 
 function init(){
